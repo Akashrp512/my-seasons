@@ -9,7 +9,12 @@ class App extends React.Component{
      this.state={ latitude: null, errorMessage: '' };
 
 
-     window.navigator.geolocation.getCurrentPosition(
+ 
+  }
+
+  componentDidMount() {
+
+    window.navigator.geolocation.getCurrentPosition(
         position => {
             //we called set state to update our latitude
             this.setState({latitude: position.coords.latitude})
@@ -22,8 +27,7 @@ class App extends React.Component{
             this.setState({errorMessage: error.message})
         }
      );
-  }
-
+  };
 
     //react says we have to define render
     render() {
