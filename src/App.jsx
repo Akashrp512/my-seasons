@@ -3,14 +3,18 @@ import React from 'react'
 
 
 class App extends React.Component{
+  /*
   constructor(props) {
       super(props); 
-//THIS IS THE ONLY TIME we do direct assignment ot this.state
-     this.state={ latitude: null, errorMessage: '' };
-
-
- 
+    //THIS IS THE ONLY TIME we do direct assignment to this.state
+      this.state={ latitude: null, errorMessage: '' };  
+    
   }
+  */
+
+// ANOTHER WAY TO INITIALIZE STATE
+
+  state={lat:null, errorMessage: ''};
 
   componentDidMount() {
 
